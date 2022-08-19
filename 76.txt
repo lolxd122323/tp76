@@ -1,0 +1,33 @@
+CREATE TABLE table01 (
+  idclientes           int NOT NULL PRIMARY KEY,
+  `nombre de cliente`  varchar(30),
+  `apellido cliente`   varchar(30),
+  `fecha nac cliente`  date,
+  `peso clente`        int,
+  `altura cliente`     int,
+  `domicilio cliente`  varchar(30),
+  `cod postal`         int,
+  movil01cliente       int,
+  movil02cliente       int,
+  `main@cliente`       varchar(30)
+) ENGINE = InnoDB;
+
+2)
+	a.
+		SELECT peso, altura FROM `table1` WHERE peso <= 90 , altura <= 1.78 
+	b.
+		SELECT codigopostal, emailcliente FROM `table1` WHERE codigopostal != 7600 AND emailcliente LIKE '%gmail%'		
+	c.
+		SELECT AVG(altura) FROM `table1`
+	d.
+		SELECT MAX(altura) FROM `table1`
+	e.
+		SELECT MIN(altura) FROM `table1`
+3)
+	a.UPDATE `table01` SET `fechanaccliente` = "1979-04-04" WHERE `apellidocliente` = "Mercado";
+ 	 select * FROM `table01`;
+	b.UPDATE `table01` SET `movil02cliente` = "22344545" WHERE `apellidocliente` = "Forchino";
+ 	select * FROM `table01`;
+	c.UPDATE `table01` SET `alturacliente` = `1.80` WHERE `apellidocliente` = "Fernandez";
+  	select * FROM `table01`;
+		
